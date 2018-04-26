@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`valid component 1`] = `
+Object {
+  "bundle": Object {
+    "hashKey": "95006dbf0f72b31905bce0cc0fc87067877f059f",
+  },
+  "template": Object {
+    "hashKey": "645ac3df91dad323fe217aaf1f61fb70f63d23f8",
+    "src": "template.js",
+    "type": "ot-oc-template-react-email",
+  },
+}
+`;
+
+exports[`valid component 2`] = `"var oc=oc||{};oc.components=oc.components||{};oc.components['645ac3df91dad323fe217aaf1f61fb70f63d23f8']=function(model){ return model.__html ? model.__html : ''; }"`;

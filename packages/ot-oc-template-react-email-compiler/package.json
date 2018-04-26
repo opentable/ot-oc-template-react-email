@@ -1,0 +1,61 @@
+{
+  "name": "ot-oc-template-react-email-compiler",
+  "version": "0.0.1",
+  "description": "OpenTable OC-Template-React compiler tailored for email",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opentable/ot-oc-template-react-email.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opentable/ot-oc-template-react-email/issues"
+  },
+  "homepage": "https://github.com/opentable/ot-oc-template-react-email#readme",
+  "keywords": [
+    "oc",
+    "opencomponents",
+    "react",
+    "emails",
+    "oc-template"
+  ],
+  "author": {
+    "name": "Nick Balestra",
+    "email": "nick@balestra.ch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.4.1",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "0.3.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "fs-extra": "5.0.0",
+    "infinite-loop-loader": "^1.0.3",
+    "lodash": "^4.17.4",
+    "memory-fs": "^0.4.1",
+    "node-dir": "0.1.17",
+    "oc-external-dependencies-handler": "1.0.6",
+    "oc-generic-template-compiler": "2.0.4",
+    "oc-get-unix-utc-timestamp": "1.0.2",
+    "oc-hash-builder": "1.0.2",
+    "oc-minify-file": "1.0.14",
+    "oc-react-component-wrapper": "1.0.2",
+    "oc-statics-compiler": "2.0.10",
+    "ot-oc-template-react-email": "0.0.1",
+    "oc-templates-messages": "1.0.2",
+    "oc-view-wrapper": "1.0.3",
+    "oc-webpack": "2.3.2",
+    "prop-types": "15.6.1",
+    "react": "16.2.0",
+    "webpack": "^3.5.5"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "utils",
+    "scaffold",
+    "README.md",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "ot-oc-template-react-email",
+  "version": "0.0.1",
+  "description": "OT-OC-Template-React-email",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opentable/ot-oc-template-react-email.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opentable/ot-oc-template-react-email/issues"
+  },
+  "homepage": "https://github.com/opentable/ot-oc-template-react-email#readme",
+  "keywords": [
+    "oc",
+    "opencomponents",
+    "react",
+    "email",
+    "oc-template"
+  ],
+  "author": {
+    "name": "Nick Balestra",
+    "email": "nick@balestra.ch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "minimal-request": "3.0.0",
+    "nice-cache": "0.0.5",
+    "oc-generic-template-renderer": "2.0.4",
+    "prop-types": "15.6.1",
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "externals": {
+    "prop-types": {
+      "global": "PropTypes",
+      "url": "https://unpkg.com/prop-types@15.6.1/prop-types.min.js"
+    },
+    "react": {
+      "global": "React",
+      "url": "https://unpkg.com/react@16.2.0/umd/react.production.min.js"
+    },
+    "react-dom": {
+      "global": "ReactDOM",
+      "url": "https://unpkg.com/react-dom@16.2.0/umd/react-dom.production.min.js"
+    }
+  }
+}
