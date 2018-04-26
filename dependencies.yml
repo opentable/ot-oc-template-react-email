@@ -1,0 +1,40 @@
+collectors:
+
+- type: js-npm
+  path: /
+  actors:
+  # pull requests for updates to any version
+  - type: js-npm
+    versions: "Y.Y.Y"
+
+- type: js-npm
+  path: packages/ot-oc-template-react-email
+  actors:
+  # pull requests for updates to any version
+  - type: js-npm
+    dependencies_not_matching: "^(react|react-dom|prop-types)$"
+    versions: "Y.Y.Y"
+  # pull request to update externals
+  - type: find-replace
+    dependencies: "^(react|react-dom|prop-types)$"
+    versions: "Y.Y.Y"
+    settings:
+      paths:
+      - packages/ot-oc-template-react-email/package.json
+      patterns:
+      - 'https://unpkg.com/{name}@{version_clean}/'
+      - '"{name}": "{version_clean}",'
+
+- type: js-npm
+  path: packages/ot-oc-template-react-email-compiler
+  actors:
+  # pull requests for updates to any version
+  - type: js-npm
+    versions: "Y.Y.Y"
+
+- type: js-npm
+  path: acceptance-setup
+  actors:
+  # pull requests for updates to any version
+  - type: js-npm
+    versions: "Y.Y.Y"
