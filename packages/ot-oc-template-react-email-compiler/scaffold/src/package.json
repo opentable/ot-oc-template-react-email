@@ -3,6 +3,8 @@
   "description": "",
   "version": "1.0.0",
   "oc": {
+    "container": false,
+    "renderInfo": false,
     "files": {
       "data": "server.js",
       "template": {
