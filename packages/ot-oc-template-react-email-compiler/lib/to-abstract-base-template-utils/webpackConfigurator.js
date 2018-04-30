@@ -1,5 +1,4 @@
 "use strict";
-
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 const path = require("path");
 const webpack = require("oc-webpack").webpack;
