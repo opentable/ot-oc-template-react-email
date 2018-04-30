@@ -1,6 +1,6 @@
 {
-  "name": "base-component-react-email",
-  "description": "",
+  "name": "react-email-component",
+  "private": true,
   "version": "1.0.0",
   "oc": {
     "container": false,
@@ -8,7 +8,7 @@
     "files": {
       "data": "server.js",
       "template": {
-        "src": "mailComponent.js",
+        "src": "app.js",
         "type": "ot-oc-template-react-email"
       }
     },
@@ -22,7 +22,10 @@
       }
     }
   },
+  "dependencies": {
+    "ot-oc-template-react-email-compiler": "0.0.1"
+  },
   "devDependencies": {
-    "ot-oc-template-react-email-compiler": "*"
+    "ot-oc-template-react-email-compiler": "0.0.1"
   }
 }

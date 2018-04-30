@@ -1,8 +1,5 @@
 "use strict";
-
-// const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const MinifyPlugin = require("babel-minify-webpack-plugin");
-const externalDependenciesHandlers = require("oc-external-dependencies-handler");
 const path = require("path");
 const webpack = require("oc-webpack").webpack;
 
@@ -16,16 +13,9 @@ module.exports = function webpackConfigGenerator(options) {
   const cssLoader = {
     test: /\.css$/,
     use: [
-      // TODO: add style-loader/css-object-loader
-      // {
-      //   loader: require.resolve("css-loader"),
-      //   options: {
-      //     importLoaders: 1,
-      //     modules: true,
-      //     localIdentName,
-      //     camelCase: true
-      //   }
-      // }
+      {
+        loader: require.resolve("css-object-loader")
+      }
     ]
   };
 
@@ -51,8 +41,7 @@ module.exports = function webpackConfigGenerator(options) {
     externals: options.externals,
     module: {
       rules: [
-        // TODO: rework css strategy loaders for email/inline
-        // cssLoader,
+        cssLoader,
         {
           test: /\.jsx?$/,
           exclude: /node_modules\/(?!(ot-oc-template-react-email-compiler\/utils))/,

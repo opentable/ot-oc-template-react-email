@@ -70,7 +70,7 @@ const componentScenarios = (componentName, i) => ({
   }
 });
 
-const components = ["react-component" /*, "react-component-with-css"*/].map(
+const components = ["react-component", "react-component-with-css"].map(
   componentScenarios
 );
 
