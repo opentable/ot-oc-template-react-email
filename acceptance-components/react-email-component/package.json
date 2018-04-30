@@ -1,0 +1,31 @@
+{
+  "name": "react-email-component",
+  "private": true,
+  "version": "1.0.0",
+  "oc": {
+    "container": false,
+    "renderInfo": false,
+    "files": {
+      "data": "server.js",
+      "template": {
+        "src": "app.js",
+        "type": "ot-oc-template-react-email"
+      }
+    },
+    "parameters": {
+      "name": {
+        "default": "World",
+        "description": "Your name",
+        "example": "Jane Doe",
+        "mandatory": false,
+        "type": "string"
+      }
+    }
+  },
+  "dependencies": {
+    "ot-oc-template-react-email-compiler": "0.0.1"
+  },
+  "devDependencies": {
+    "ot-oc-template-react-email-compiler": "0.0.1"
+  }
+}
