@@ -30,6 +30,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "css-object-loader":"^0.0.7",
     "fs-extra": "5.0.0",
     "infinite-loop-loader": "^1.0.3",
     "lodash": "^4.17.4",
