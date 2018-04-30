@@ -1,6 +1,6 @@
 {
   "name": "ot-oc-template-react-email-compiler",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "OpenTable OC-Template-React compiler tailored for email",
   "main": "index.js",
   "repository": {
