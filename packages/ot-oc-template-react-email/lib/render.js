@@ -27,7 +27,7 @@ module.exports = (options, callback) => {
     tryGetCached("reactComponent", key, getJsFromUrl, (err, CachedApp) => {
       if (err) return callback(err);
       try {
-        const reactHtml = ReactDOMServer.renderToString(
+        const reactHtml = ReactDOMServer.renderToStaticMarkup(
           React.createElement(CachedApp, props)
         );
 
