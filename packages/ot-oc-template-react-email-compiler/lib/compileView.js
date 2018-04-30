@@ -5,7 +5,6 @@ const compiler = require("oc-webpack").compiler;
 const fs = require("fs-extra");
 const hashBuilder = require("oc-hash-builder");
 const MemoryFS = require("memory-fs");
-// const minifyFile = require("oc-minify-file");
 const ocViewWrapper = require("oc-view-wrapper");
 const path = require("path");
 const reactComponentWrapper = require("oc-react-component-wrapper");
@@ -64,33 +63,17 @@ module.exports = (options, callback) => {
       const wrappedBundle = reactComponentWrapper(bundleHash, bundle);
       fs.outputFileSync(bundlePath, wrappedBundle);
 
-      // let css = null;
-      // if (data.build["main.css"]) {
-      //   // This is an awesome hack by KimTaro that will blow your mind.
-      //   // Remove it once this get merged: https://github.com/webpack-contrib/css-loader/pull/523
-      //   css = fontFamilyUnicodeParser(
-      //     memoryFs.readFileSync(`/build/main.css`, "UTF8")
-      //   );
-
-      //   // We convert single quotes to double quotes in order to
-      //   // support the viewTemplate's string interpolation
-      //   css = minifyFile(".css", css).replace(/\'/g, '"');
-      //   const cssPath = path.join(publishPath, `styles.css`);
-      //   fs.outputFileSync(cssPath, css);
-      // }
-
-      // const reactRoot = `oc-reactRoot-${componentPackage.name}`;
-      // const templateString = viewTemplate({
-      // reactRoot,
-      // css,
-      // externals,
-      // bundleHash,
-      // bundleName
-      // });
+      const reactRoot = `oc-reactRoot-${componentPackage.name}`;
+      const templateString = viewTemplate({
+        reactRoot,
+        externals,
+        bundleHash,
+        bundleName
+      });
 
       const viewTemplateCompressed = production
-        ? viewTemplate.replace(/\s+/g, " ")
-        : viewTemplate;
+        ? templateString.replace(/\s+/g, " ")
+        : templateString;
       const hash = hashBuilder.fromString(viewTemplateCompressed);
       const view = ocViewWrapper(hash, viewTemplateCompressed);
       return cb(null, {

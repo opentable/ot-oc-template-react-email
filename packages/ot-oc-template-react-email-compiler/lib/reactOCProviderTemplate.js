@@ -4,10 +4,6 @@ const reactOCProviderTemplate = ({ viewPath }) => `
   import View from '${viewPath}';
 
   class OCProvider extends React.Component {
-    componentDidMount(){
-      const { _staticPath, _baseUrl, _componentName, _componentVersion, ...rest } = this.props;
-    }
-
     getChildContext() {
       const getSetting = setting => {
         const settingHash = {
