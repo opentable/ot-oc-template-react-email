@@ -42,7 +42,19 @@ Externals are not bundled when packaging and publishing the component, for bette
  
 ### features
 - `Server Side Rendering` = server side rendering should work as for any other OpenComponent. Differently from the 'oc-template-react' template this template rely on [`renderToStaticMarkup()`](https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup) for SSR as no hidration is needed.
-- `css` is supported by converting any css imported into [Style Objects](https://www.w3schools.com/jsref/dom_obj_style.asp). This object is compatible with React Inline Styles. 
+- `css` is supported by converting any css imported into [Style Objects](https://www.w3schools.com/jsref/dom_obj_style.asp). This object is compatible with React Inline Styles.
+- `Whitelist dependencies` to be inlcuded in the build process done by the compiler. To whitelist dependencies installed in the node_modules folder, add in the package.json of the component a `buildIncludes` list:
+  ```json
+    ...
+    oc : {
+      files: {
+        template: {
+          ...
+          buildIncludes: ['npm-dependency-to-build']
+        }
+      }
+    }
+  ```
 
 
 
