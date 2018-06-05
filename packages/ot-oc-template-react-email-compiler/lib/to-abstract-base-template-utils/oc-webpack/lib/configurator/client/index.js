@@ -1,9 +1,10 @@
 "use strict";
+
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 const path = require("path");
 const webpack = require("oc-webpack").webpack;
 
-const createExcludeRegex = require("./createExcludeRegex");
+const createExcludeRegex = require("../createExcludeRegex");
 
 module.exports = function webpackConfigGenerator(options) {
   const buildPath = options.buildPath || "/build";
@@ -39,6 +40,13 @@ module.exports = function webpackConfigGenerator(options) {
   const cacheDirectory = !production;
 
   return {
+    mode: production ? "production" : "development",
+    optimization: {
+      // https://webpack.js.org/configuration/optimization/
+      // Override production mode optimization for minification
+      // As it currently breakes the build, still rely on babel-minify-webpack-plugin instead
+      minimize: false
+    },
     entry: options.viewPath,
     output: {
       path: buildPath,
@@ -76,9 +84,15 @@ module.exports = function webpackConfigGenerator(options) {
     plugins,
     resolve: {
       alias: {
-        react: path.join(__dirname, "../../node_modules/react"),
-        "react-dom": path.join(__dirname, "../../node_modules/react-dom"),
-        "prop-types": path.join(__dirname, "../../node_modules/prop-types")
+        react: path.join(__dirname, "../../../../../node_modules/react"),
+        "react-dom": path.join(
+          __dirname,
+          "../../../../../node_modules/react-dom"
+        ),
+        "prop-types": path.join(
+          __dirname,
+          "../../../../../node_modules/prop-types"
+        )
       }
     }
   };
