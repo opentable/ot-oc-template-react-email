@@ -1,7 +1,7 @@
 {
   "name": "react-email-component",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.0",
   "oc": {
     "container": false,
     "renderInfo": false,

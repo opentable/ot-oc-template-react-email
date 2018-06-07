@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registry should correctly serve rendered and unrendered components 1`] = `"{\\"type\\":\\"oc-component-local\\",\\"version\\":\\"6.6.6\\",\\"requestVersion\\":\\"\\",\\"name\\":\\"react-email-component\\",\\"renderMode\\":\\"rendered\\",\\"href\\":\\"http://localhost:3000/react-email-component?name=SuperMario\\",\\"html\\":\\"<div style=\\\\\\"background:palevioletred;color:white;display:flex\\\\\\"><h1>Hello SuperMario</h1><ul><li>component name: react-email-component</li><li>component version: 6.6.6</li><li>registry baseUrl: http://localhost:3000/</li><li>component staticPath: http://localhost:3000/react-email-component/6.6.6/static/</li></ul></div>\\"}"`;
